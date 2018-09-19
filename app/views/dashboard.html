@@ -1,0 +1,133 @@
+{% extends "layout-signed-in.html" %}
+{% set logged_in = true %}
+
+{% block pageTitle %}
+  Dashboard
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      
+      <span class="govuk-caption-xl">Nevern Power Limited</span>
+      <h1 class="govuk-heading-xl">Trade greenhouse gas emissions dashboard
+      </h1>
+
+      <!-- <span class="govuk-caption-l">Total allowance</span>
+      <h2 class="govuk-heading-l" style="margin-bottom: 10px">123 000</h2>
+      <p class="govuk-body" style="margin-bottom: 80px;"><a href="#" class="govuk-link">View transfer history</a></p> -->
+      
+     <!--  <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <span class="govuk-caption-l">Total allowance</span>
+          <h2 class="govuk-heading-l">123 000</h2>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <span class="govuk-caption-l">Days until report is due</span>
+          <h2 class="govuk-heading-l">121</h2>
+        </div>
+      </div> -->
+
+      <!-- <p class="govuk-body">Anytime</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#" class="govuk-link">Buy emissions</a></li>
+        <li><a href="#" class="govuk-link">Sell emissions</a></li>
+      </ul>
+      <p class="govuk-body">By 1 Jan</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#" class="govuk-link">Submit emissions report</a></li>
+      </ul>
+      <p class="govuk-body">By 30 Apr</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="#" class="govuk-link">Surrender allowance</a></li>
+      </ul>
+
+ -->
+      <!-- <hr style="border: none;height: 3px;background: grey;margin-bottom: 60px;"> -->
+      <ol class="app-task-list" style="margin-left: -30px">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span> Before year start
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="eligibility-completed">
+                Confirm permit details
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="read-declaration-completed">
+                Submit monitoring plan
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="read-declaration-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span> Throughout the year
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                Monitor gas emissions
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="/buy-sell" aria-describedby="company-information-completed">
+                Buy or sell emissions allowance
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                Appoint a verifier
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">Completed</strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                Get verified
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span> Before year end
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Submit emissions report
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed app-task-list__task-deadline" id="contact-details-completed">By 1 Jan</strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="medical-information-completed">
+                Surrender allowance
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed app-task-list__task-deadline" id="contact-details-completed">By 30 Apr</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+
+<style>
+  .govuk-tag {
+    /*background-color: black;*/
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .app-task-list__task-deadline {
+    background: none;
+    color: black;
+  }
+</style>
+{% endblock %}

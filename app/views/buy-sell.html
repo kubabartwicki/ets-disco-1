@@ -1,0 +1,46 @@
+{% extends "layout-signed-in.html" %}
+{% block pageTitle %}
+  Do you want to buy or sell emissions allowance?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/sell" method="post">
+
+        {{ govukRadios({
+          idPrefix: "where-do-you-live",
+          name: "where-do-you-live",
+          fieldset: {
+            legend: {
+              text: "Do you want to buy or sell emissions allowance?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--xl"
+            }
+          },
+          items: [
+            {
+              value: "buy",
+              text: "Buy"
+            },
+            {
+              value: "sell",
+              text: "Sell"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

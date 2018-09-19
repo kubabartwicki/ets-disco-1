@@ -1,0 +1,49 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+  Who do you want to sell allowance to?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/sell-amount">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Who do you want to sell allowance to?
+      </h1>
+      
+      <p class="govuk-body-l">The buyer and their second representative will have to approve this transfer before the allowance gets taken off your account.</p>
+
+      <form class="form" action="/sell-confirm" method="post">
+
+        {% from "input/macro.njk" import govukInput %}
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Who do you want to sell allowance to?
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Choose a buyer</option>
+            <option value="updated">National Grid Gas plc</option>
+            <option value="views">ConocoPhillips</option>
+            <option value="comments">Dalkia Utilities Services</option>
+            <option value="updated" >Perenco UK Ltd</option>
+            <option value="views">Polimeri Europa UK Limited</option>
+            <option value="comments">De La Rue International Ltd</option>
+            <option value="updated">E.ON UK CHP Ltd</option>
+            <option value="views">Citigen (London) Ltd</option>
+            <option value="comments">Procter & Gamble Product Supply (UK) Ltd</option>
+          </select>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
