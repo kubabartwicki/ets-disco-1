@@ -1,5 +1,5 @@
 {% extends "layout-signed-in.html" %}
-{% set logged_in = true %}
+{% set is_dashboard = true %}
 
 {% block pageTitle %}
   Dashboard
@@ -20,8 +20,8 @@
       </h1>
 
       <span class="govuk-caption-l" style="margin-bottom:5px">Remaining allowance</span>
-      <h2 class="govuk-heading-l" style="margin-bottom: 5px">123 000</h2>
-      <p class="govuk-body" style="margin-bottom: 80px;"><a href="#" class="govuk-link">View transfer history</a></p>
+      <h2 class="govuk-heading-l" style="margin-bottom: 5px">{% if data.step == '0a' %}101 500{% elseif data.step == '1' or data.step == '2' %}566{% else %}123 000{% endif %}</h2>
+      <p class="govuk-body" style="margin-bottom: 80px;"><a href="#" class="govuk-link disabled">View transfer history</a></p>
       <!-- 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
