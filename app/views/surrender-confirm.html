@@ -1,0 +1,28 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+  Confirm surrender of allowance
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/surrender-sell-roll">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Confirm surrender of allowance
+      </h1>
+      
+      <p class="govuk-body-l">We will add <strong>123</strong> units of allowance to your overall allowance next year.</p>
+
+      {{ govukButton({
+        href: "/surrender-confirmed",
+        text: "Confirm surrender of allowance"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

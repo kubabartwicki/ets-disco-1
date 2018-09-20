@@ -1,0 +1,100 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+  Has your installation changed?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Has your installation changed?
+      </h1>
+      
+      <p class="govuk-body-l">You need to tell us if you changed your installation.</p>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        rows: [
+          [
+            {
+              text: "Installation name"
+            },
+            {
+              text: "Nevern Power Limited"
+            }
+          ],
+          [
+            {
+              text: "Installation type"
+            },
+            {
+              text: "Fixed operator"
+            }
+          ],
+          [
+            {
+              text: "Permit start date"
+            },
+            {
+              text: "02/03/2015"
+            }
+          ],
+          [
+            {
+              text: "Permit expiry date"
+            },
+            {
+              text: "02/03/2025"
+            }
+          ],
+          [
+            {
+              text: "Address"
+            },
+            {
+              text: "Knutsford Road, Warrington, WA4 1HT"
+            }
+          ],
+          [
+            {
+              text: "Company number"
+            },
+            {
+              text: "GB132742785"
+            }
+          ],
+          [
+            {
+              text: "Phone number"
+            },
+            {
+              text: "39218204"
+            }
+          ],
+          [
+            {
+              text: "Responsible person"
+            },
+            {
+              text: "John Insole"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukButton({
+        href: "/report-allowance",
+        text: "These details are correct"
+      }) }}
+
+      <p class="govuk-body"><a href="#" class="govuk-link">Contact us to change monitoring plan</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

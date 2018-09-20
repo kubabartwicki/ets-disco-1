@@ -1,0 +1,61 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+  How much allowance did you use?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/report-plan">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">How much allowance did you use?
+      </h1>
+      
+
+            <p class="govuk-body-l">You need to tell us how many tonnes you have emitted using measurements defined in your monitoring plan. You had a total of <strong>123 000</strong> units of allowance for <strong>2018</strong>. </p>
+     
+      
+
+      {{ govukInput({
+          label: {
+            text: "CO2 emissions in tonnes",
+            classes: "govuk-!-width-one-half"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "one-quarter",
+          name: "one-quarter"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "N2O emissions in tonnes",
+            classes: "govuk-!-width-full"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "one-quarter",
+          name: "one-quarter"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "PFC emissions in tonnes",
+            classes: "govuk-!-width-full"
+          },
+          classes: "govuk-!-width-one-third",
+          id: "one-quarter",
+          name: "one-quarter"
+        }) }}
+
+      {{ govukButton({
+        href: "/report-verifier",
+        text: "Save and continue"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

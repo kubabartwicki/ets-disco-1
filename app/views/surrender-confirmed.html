@@ -1,7 +1,7 @@
 {% extends "layout-signed-in.html" %}
 
 {% block pageTitle %}
-  Confirm sale of emissions allowance
+  You surrendered your allowance
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,14 +14,14 @@
     <div class="govuk-grid-column-two-thirds">
       
       {{ govukPanel({
-        titleText: "We asked the buyer to approve this sale",
+        titleText: "We surrendered your allowance",
         html: "Your reference number<br><strong>HDJ2123F</strong>"
       }) }}
 
-      <p class="govuk-body">We also sent you a confirmation email.</p> <p class="govuk-body">Once the buyer and their second representative confirm this transfer, the allowance will get taken off your account.</p>
+      <p class="govuk-body">We have sent you a confirmation email. We will add <strong>123</strong> units of allowance to your overall allowance next year.</p>
 
       {{ govukButton({
-        href: "/dashboard?step=0",
+        href: "/dashboard?step=2",
         text: "Back to dashboard"
       }) }}
 

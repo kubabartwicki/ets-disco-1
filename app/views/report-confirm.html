@@ -1,0 +1,99 @@
+{% extends "layout-signed-in.html" %}
+
+{% block pageTitle %}
+  Confirm emissions report
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/report-verifier">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Confirm emissions report
+      </h1>
+      
+      <p class="govuk-body-l">The numbers you entered show that you will have <strong>123</strong> units left at the end of the year.</p>
+
+      {{ govukTable({
+        firstCellIsHeader: true,
+        head: [
+          {
+            text: "Gas emitted"
+          },
+          {
+            text: "Emissions in tonnes",
+            format: "numeric"
+          },
+          {
+            text: "Emissions in allowance units",
+            format: "numeric"
+          }
+        ],
+        rows: [
+          [
+            {
+              text: "CO2"
+            },
+            {
+              text: "123",
+              format: "numeric"
+            },
+            {
+              text: "345",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "N2O"
+            },
+            {
+              text: "642",
+              format: "numeric"
+            },
+            {
+              text: "122",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "PFC"
+            },
+            {
+              text: "94",
+              format: "numeric"
+            },
+            {
+              text: "23422",
+              format: "numeric"
+            }
+          ],
+          [
+            {
+              text: "Total"
+            },
+            {
+              text: "94",
+              format: "numeric"
+            },
+            {
+              text: "23422",
+              format: "numeric"
+            }
+          ]
+        ]
+      }) }}
+
+      {{ govukButton({
+        href: "/report-confirmed",
+        text: "Confirm emissions report"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}

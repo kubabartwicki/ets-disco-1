@@ -1,43 +1,36 @@
 {% extends "layout-signed-in.html" %}
 
 {% block pageTitle %}
-  How do you want to sell allowance?
+  What do you want to do with unused allowance?
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/buy-sell">Back</a>
+  <a class="govuk-back-link" href="/surrender">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">What do you want to do with unused allowance?
+      </h1>
       
-      <form class="form" action="/sell-amount" method="post">
+      <p class="govuk-body-l">You have <strong>123</strong> unused units left.</p>
+      
+      <form class="form" action="/surrender-confirm" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h1 class="govuk-fieldset__heading">
-                How do you want to sell allowance?
-              </h1>
-            </legend>
-            <p class="govuk-body">You should <a href="govuk-body-link">agree the sale with your buyer</a> before you submit it here. <a href="#">Learn more</a> about the different ways of selling allowance.</p>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                  In an auction
+                  Use next year
                 </label>
               </div>
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
                 <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                  Using a broker
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-                  Using a direct transfer
+                  Sell
                 </label>
               </div>
             </div>
